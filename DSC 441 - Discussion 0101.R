@@ -1,3 +1,4 @@
+### Dicussion 1
 data_set <- c(18, 8, 22, 10, 12, 5, 4, 32, 2, 9, 16, 25, 26, 28)
 
 # Bin the data
@@ -16,7 +17,7 @@ data_after_smoothing <- unlist(lapply(unique(bins), find_median))
 cat("Bins:", bins, "\n\n")
 cat("Smoothed Data:", data_after_smoothing, "\n\n")
 
-#####
+### Dicussion 2
 data_set <- c(18, 8, 22, 10, 12, 5, 4, 32, 2, 9, 16, 25, 26, 28)
 
 # Function to Min-Max Scaling to range 10 to 20
