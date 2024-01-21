@@ -195,6 +195,7 @@ library(e1071)
 storm_dummies <- dummies
 storm_dummies$category <- storm$category
 train_control = trainControl(method = "cv", number = 5)
+
 svm_storm <- train(category ~., data = storm_dummies, method = "svmLinear", trControl = train_control)
 svm_storm
 
