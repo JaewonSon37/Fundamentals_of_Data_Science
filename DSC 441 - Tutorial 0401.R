@@ -51,13 +51,14 @@ svm5 <- train(Species ~., data = iris, method = "svmLinear",
 svm5
 
 # Confusion Matrix
+pred_split <- predict(svm_split, test_set)
 confusionMatrix(test_set$Species, pred_split)
 
 pred_split_train <- predict(svm_split, train_set)
 confusionMatrix(train_set$Species, pred_split_train)
 
 ## Grid search
-grid <- expand.grid(C = 10^seq(-5,2,0.5))
+grid <- expand.grid(C = 10 ^ seq(-5,2,0.5))
 svm_grid <- train(Species ~., data = iris, method = "svmLinear", 
                   trControl = train_control, tuneGrid = grid)
 svm_grid
