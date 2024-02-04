@@ -205,6 +205,8 @@ confusionMatrix(data = svm_starwars_pca_cv2_pred_test, reference = test_set$gend
 # Bonus Problem 1
 library(ggplot2)
 
+set.seed(39)
+
 mycars <- mtcars 
 mycars$folds <- 0
 
